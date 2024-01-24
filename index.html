@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style-home.css">
+        <link rel="stylesheet" href="reset.css">
+        <script src="app.js"></script>
+        <title>Encriptador</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="encriptar">
+                <textarea id="texto" class="texto" rows="20" cols="30" placeholder="Ingrese un texto a encriptar"></textarea>
+                <div class="terminos">
+                    <p>Solo letras minusculas y sin acentos</p>
+                </div>
+                <div class="botones">
+                    <input type="button" value="Encriptar" class="btn-encriptar" onclick="capturarTexto()">
+                    <input type="button" value="Desencriptar" class="btn-desencriptar" onclick="desencriptarTexto()">
+                </div>
+            </div>
+            <div class="encriptado">
+                
+                <img src="./img/muneco.png" id="imagen-encriptado">
+                
+                <div class="mensaje-encriptado" id="mensaje-encriptado">
+                    <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2>
+                    <p id="parrafo">Ingresa un texto a desencriptar</p>
+                    <!--                    
+                        <textarea id="mensaje" class="mensaje" rows="20" cols="30"></textarea>
+                    -->
+
+                    <input type="button" id="btnCopiar" value="Copiar" class="btn-copiar" onclick="copiarAlPortapapeles()">
+                </div>
+            </div>
+            
+        </div>
+
+    </body>
+</html>
