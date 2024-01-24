@@ -28,7 +28,14 @@ function capturarTexto(){
         titulo.textContent = "El texto fue encriptado con exito";
         parrafo.textContent = "";
     }else{
-        alert("Es necesario escribir un texto a encriptar");
+        
+        //swal("Es necesario escribir un texto a encriptar");
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Debes escribir un texto para que el encriptador funcione",
+            footer: 'No olvides visitar mi <a href="https://github.com/juanmedina100">repositorio</a> y darle una estrella'
+          });
         titulo.textContent = "Ningun mensaje encontrado";
         parrafo.textContent = "Ingresa un texto a desencriptar";
         muneco.src = "./img/muneco.png"
@@ -91,7 +98,7 @@ function capturarTexto(){
       }
     }
     console.log("esto "+textoDesencriptado);
-    
+
     document.getElementById("texto").value=textoDesencriptado;
     return textoDesencriptado;
   }
@@ -102,6 +109,13 @@ function capturarTexto(){
         textoACopiar.select();
         textoACopiar.setSelectionRange(0,999999);
         document.execCommand('copy');
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Texto copiado",
+            showConfirmButton: false,
+            timer: 1500
+          });
     }catch(error){
         console.log("Error en el copiado")
     }
