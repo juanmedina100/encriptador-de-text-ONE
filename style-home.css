@@ -4,6 +4,12 @@
     height: 100vh;
     background:#F3F5FC;
 }
+.imagen-logo{
+    width: 32px;
+    position: absolute;
+    left: 12%;
+    top: 6%;
+}
 .texto{
     position: absolute;
     width: 42%;
