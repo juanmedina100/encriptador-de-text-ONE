@@ -29,7 +29,7 @@ function capturarTexto(){
         parrafo.textContent = "";
     }else{
         
-        //swal("Es necesario escribir un texto a encriptar");
+        //alert("Es necesario escribir un texto a encriptar");
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -98,7 +98,8 @@ function capturarTexto(){
       }
     }
     console.log("esto "+textoDesencriptado);
-
+    let muneco = document.getElementById("imagen-encriptado");
+    muneco.src = "./img/muneco.png"
     document.getElementById("texto").value=textoDesencriptado;
     return textoDesencriptado;
   }
